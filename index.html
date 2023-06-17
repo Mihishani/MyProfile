@@ -9,7 +9,10 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="html_Assignment_file.css">
     <style>
+
         .firstPage{
             height: 100vh;
             width: 100%;
@@ -142,6 +145,10 @@
         }
         .b2:hover{
             background: #FFB6C1 ;
+        }
+
+        #navBar{
+            display: none;
         }
 
         .box div{
@@ -491,134 +498,137 @@
             right: 0px;
         }
 
-        .SkillMain{
-            width: 60%;
-            display: grid;
-            grid-template-columns: repeat(1,1fr);
-            grid-column-gap: 2px;
-            grid-row-gap: 10px;
-            position: relative;
-            top: -10px;
-            left: 200px;
+        .Skill_veriety{
+            display:flex;
+            margin:0;
+            padding:0;
+            min-height: 100vh;
+            background: #444;
+            justify-content: center;
+            align-items: center;
+            font-family: arial;
         }
 
-        .SkillMain .skillBar .info{
+        .containerSkills{
+            width: 1000px;
+            position: relative;
+            top: -150px;
             display: flex;
             justify-content: space-between;
-            padding: 0 10px;
+            flex-wrap:wrap;
 
         }
 
-        .skillBar .bar{
-            width: 110%;
-            height: 10px;
+        .containerSkills .cardSkills{
             position: relative;
-            background-color: rgba(0,0,0,0.199);
-            border-radius: 25px;
-        }
-
-        .skillBar .bar span{
-            width: 50%;
-            height: 100%;
-            position: absolute;
-            background-color: navy;
-            border-radius: 25px;
-
 
         }
 
-        .skillBar .info .percent{
-            font-weight: bold;
-        }
-
-        .skillBar .bar .html{
-            width: 90%;
-            animation: html 5s;
+        .containerSkills .cardSkills .face{
+            width:300px;
+            height: 200px;
+            transition:.4s;
 
         }
 
-        @keyframes html {
-            0%{
-                width: 0;
-            }100%{
-                 width: 90%;
-             }
-        }
-        .skillBar .bar .css{
-            width: 70%;
-            animation: css 5s;
-        }
-
-        @keyframes css {
-            0%{
-                width: 0;
-            }100%{
-                 width: 70%;
-             }
+        .containerSkills .cardSkills .face.face1{
+            position: relative;
+            background: rosybrown;
+            display: flex;
+            justify-content: center;
+            align-content:center;
+            align-items: center;
+            z-index: 1;
+            transform: translateY(100px);
         }
 
-        .skillBar .bar .javaScript{
-            width: 60%;
-            animation: javaScript 5s;
-        }
-
-        @keyframes javaScript {
-            0%{
-                width: 0;
-            }100%{
-                 width: 60%;
-             }
-        }
-        .skillBar .bar .mysql{
-            width: 90%;
-            animation: mysql 5s;
-        }
-
-        @keyframes mysql {
-            0%{
-                width: 0;
-            }100%{
-                 width: 90%;
-             }
-        }
-
-        .skillBar .bar .java{
-            width: 50%;
-            animation: java 5s;
+        .containerSkills .cardSkills:hover .face.face1{
+            transform: translateY(0);
+            box-shadow:
+                    inset 0 0 60px whitesmoke,
+                    inset 20px 0 80px #f0f,
+                    inset -20px 0 80px #0ff,
+                    inset 20px 0 300px #f0f,
+                    inset -20px 0 300px #0ff,
+                    0 0 50px #fff,
+                    -10px 0 80px #f0f,
+                    10px 0 80px #0ff;
 
         }
 
-        @keyframes java {
-            0%{
-                width: 0;
-            }100%{
-                 width: 50%;
-             }
-        }
-        .skillBar .bar .figma{
-            width: 80%;
-            animation: figma 5s;
+
+        .containerSkills .cardSkills .face.face1 .contentSkills{
+            opacity: .2;
+            transition:  0.5s;
+            text-align: center;
+
         }
 
-        @keyframes figma {
-            0%{
-                width: 0;
-            }100%{
-                 width: 80%;
-             }
-        }
-        .skillBar .bar .photshop{
-            width: 45%;
-            animation: photoshop 5s;
+        .containerSkills .cardSkills:hover .face.face1 .contentSkills{
+            opacity: 1;
+
         }
 
-        @keyframes photoshop {
-            0%{
-                width: 0;
-            }100%{
-                 width: 45%;
-             }
+        .containerSkills .cardSkills .face.face1 .contentSkills i{
+            font-size: 3em;
+            color: white;
+            display: inline-block;
+
         }
+
+        .containerSkills .cardSkills .face.face1 .contentSkills h3{
+            font-size: 1em;
+            color: white;
+            text-align: center;
+
+
+        }
+
+        .containerSkills .cardSkills .face.face1 .contentSkills a{
+            transition: .5s;
+        }
+
+        .containerSkills .cardSkills .face.face2{
+            position: relative;
+            background: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 50px rgba(0,0,0,.8);
+            transform: translateY(-100px);
+        }
+
+        .containerSkills .cardSkills:hover .face.face2{
+            transform: translateY(0);
+
+
+        }
+
+        .containerSkills .cardSkills .face.face2 .contentSkills p, a{
+            font-size: 10pt;
+            margin: 0 ;
+            padding: 0;
+            color:#333;
+        }
+
+        .containerSkills .cardSkills .face.face2 .contentSkills a{
+            text-decoration:none;
+            color: black;
+            box-sizing: border-box;
+            outline : 1px dashed #333;
+            padding: 10px;
+            margin: 15px 0 0;
+            display: inline-block;
+        }
+
+        .containerSkills .cardSkills .face.face2 .contentSkills a:hover{
+            background: #333 ;
+            color: whitesmoke;
+            box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+        }
+
 
         /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -936,82 +946,99 @@
             transform: scaleX(1);
         }
 
-        table{
-            width: 80%;
-            height: 70vh;
+
+
+        :root{
+            --background-dark: #2d3548;
+            --text-light: rgba(255,255,255,0.6);
+            --text-lighter: rgba(255,255,255,0.9);
+            --spacing-s: 8px;
+            --spacing-m: 16px;
+            --spacing-l: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 64px;
+            --width-container: 1200px;
+        }
+        .card-grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: var(--spacing-l);
+            grid-row-gap: var(--spacing-l);
+            max-width: var(--width-container);
+            width: 100%;
+        }
+
+        @media(min-width: 540px){
+            .card-grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(min-width: 960px){
+            .card-grid{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .card{
+            list-style: none;
+            position: relative;
+            left: 230px;
+            top: 50px;
+        }
+
+        .card:before{
+            content: '';
+            display: block;
+            padding-bottom: 150%;
+            width: 100%;
+        }
+
+        .card__background{
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--spacing-l);
+            bottom: 0;
+            filter: brightness(0.75) saturate(1.2) contrast(0.85);
+            left: 0;
             position: absolute;
-            top: 100px;
-            left: 10%;
             right: 0;
+            top: 0;
+            transform-origin: center;
+            trsnsform: scale(1) translateZ(0);
+            transition:
+                    filter 200ms linear,
+                    transform 200ms linear;
         }
 
-        th{
-            font-size: x-large;
-            font-weight: bolder;
-            color: #3C1414;
-        }
-        #CP{
-            width: 26%;
+        .card:hover .card__background{
+            transform: scale(1.05) translateZ(0);
         }
 
-        #AP{
-            width: 27%;
-        }
-        #Asgm{
-            width: 29%;
+        .card-grid:hover > .card:not(:hover) .card__background{
+            filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
         }
 
-        #Image1{
-            width: 70px;
-            height: 70px;
-            left: 10%;
+        .card__content{
+            left: 0;
+            padding: var(--spacing-l);
+            position: absolute;
+            top: 0;
         }
 
-
-        #Image2{
-            width: 70px;
-            height: 70px;
-            left: 10%;
+        .card__category{
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-s);
+            text-transform: uppercase;
         }
 
-        #Image3{
-            width: 70px;
-            height: 70px;
-            left: 10%;
-        }
-        #Image4{
-            width: 70px;
-            height: 70px;
-            left: 10%;
-        }
-        #Image5{
-            width: 70px;
-            height: 70px;
-            left: 10%;
-        }
-        #Image6{
-            width: 70px;
-            height: 70px;
-            left: 10%;
-        }
-        #Image7{
-            width: 70px;
-            height: 70px;
-            left: 10%;
-        }
-        #Image8{
-            width: 70px;
-            height: 70px;
-            left: 10%;
-        }
-
-        p{
-            font-weight: normal;
-            font-size: large;
-        }
-
-        .btn:hover{
-            border: 4px solid black ;
+        .card__heading{
+            color: var(--text-lighter);
+            font-size: 1.9rem;
+            text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+            line-height: 1.4;
+            word-spacing: 100vw;
         }
 
         /*///////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1261,6 +1288,10 @@
             font-size: x-large;
             left: 130px;
             top: 280px;
+        }
+
+        #myEmail a{
+            font-size: x-large;
         }
 
         #yname{
@@ -1518,13 +1549,14 @@
                 font-size: large;
                 left: 300px;
             }
+            .containerSkills .cardSkills .face{
+                width:200px;
+                height: 200px;
+                transition:.4s;
 
-            .SkillMain{
-                position: absolute;
-                top: 200px;
-                left:   100px;
-                grid-row-gap: 3px;
-                font-size: large;
+            }
+            .contentSkills p{
+                font-size: xx-small;
             }
 
             /***********fourthPage************/
@@ -1593,6 +1625,7 @@
             .text6{
                 font-size: medium;
                 left: 100px;
+
             }
 
             /****************************fifthPage*************************/
@@ -1605,79 +1638,17 @@
                 font-size: xx-large;
                 left: 250px;
             }
-            #CP{
-                font-size: larger;
-            }
-            #AP{
-                font-size: larger;
-            }
-            #Asgm{
-                font-size: larger;
-            }
 
             p{
                 font-size: medium;
             }
-            .btn{
-                width: 50px;
-                height: 50px;
-            }
-            #Image1{
-                width: 48px;
-                height: 48px;
+
+            .card{
+                width: 200px;
                 position: relative;
-                left: -7px;
-                top: -2px;
+                left: 10px;
             }
-            #Image2{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
-            #Image3{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
-            #Image4{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
-            #Image5{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
-            #Image6{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
-            #Image7{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
-            #Image8{
-                width: 48px;
-                height: 48px;
-                position: relative;
-                left: -7px;
-                top: -2px;
-            }
+
 
             /***************sixthPage**************/
 
@@ -1811,6 +1782,9 @@
                 position: relative;
                 top: 450px;
             }
+            #myEmail a{
+                font-size: large;
+            }
         }
 
         /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1819,6 +1793,13 @@
             /*  main>section>nav{
                   display: none;
               }*/
+
+            #navBar{
+                display: block;
+                position: relative;
+                right: -200px;
+            }
+
             .firstPage{
                 width: 100%;
                 height: 100vh;
@@ -1977,13 +1958,27 @@
                 top: 177px;
                 left: 20px;
             }
-            .SkillMain{
-                position: absolute;
-                top: 200px;
-                left: 80px;
-                grid-row-gap: 3px;
-                font-size: large;
+
+            .containerSkills .cardSkills .face{
+                width:130px;
+                height: 200px;
+                transition:.4s;
+
             }
+            .contentSkills p{
+                display: none;
+            }
+
+            .containerSkills{
+
+                position: relative;
+                top: -100px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap:wrap;
+
+            }
+
             /*==============fourthPage======================*/
 
 
@@ -2075,84 +2070,19 @@
             .projects::after{
                 width: 123px;
             }
-
-            #CP{
-                font-size: large;
-            }
-            #AP{
-                font-size: large;
-            }
-            #Asgm{
-                font-size: large;
-            }
-
-            .btn{
-
-                width: 40px;
-                height: 40px;
-            }
-            #Image1{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image2{
-
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image3{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image4{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image5{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image6{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image7{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-            #Image8{
-                position: relative;
-                top: -2px;
-                left: -6px;
-                width: 37px;
-                height: 37px;
-            }
-
             p{
                 font-size: medium;
             }
-
+            .card{
+                width: 150px;
+                top: -60px;
+                position: relative;
+                height:200px ;
+                left: 150px;
+            }
+            .card__heading{
+                font-size:  x-large;
+            }
             /*==============sixthPage===============*/
 
             .portfolio{
@@ -2307,11 +2237,17 @@
                 top: 500px;
 
             }
+            #myEmail a{
+                font-size: medium;
+            }
         }
 
 
     </style>
+
+
 </head>
+
 <body>
 <div id="pre-loader">
     <img id="imgLoader" src="assets/animation/Eclipse-1s-200px.gif">
@@ -2335,9 +2271,9 @@
                     <a href="#P7"><li class="li">Contact</li></a>
                 </ul>
 
-                <!-- <div id="navBar">
+                 <div id="navBar">
                      <i class="fa-solid fa-bars"></i>
-                 </div>-->
+                 </div>
             </div>
         </nav>
 
@@ -2435,77 +2371,69 @@
         <div class="thirdText2">exact skills needed for someone in this profession will vary by company, the overall skillset </div>
         <div class="thirdText3"> developers need are the same.</div>
 
-        <div class="SkillMain">
-            <div class="skillBar">
-                <div class="info">
-                    <p>HTML</p>
-                    <p class="percent">90%</p>
+
+        <section class="Skill_veriety">
+        <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+
+        <div class="containerSkills">
+            <div class="cardSkills">
+                <div class="face face1">
+                    <div class="contentSkills">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
                 </div>
-                <div class="bar">
-                    <span class="html"></span>
+                <div class="face face2">
+                    <div class="contentSkills">
+                        <p> HTML is an acronym which stands for Hyper Text Markup Language which is
+                            used for creating web pages and web applications. Let's see what is meant by Hypertext Markup Language, and Web page.</p>
+                        <a href="https://www.javatpoint.com/what-is-html" type="buttonSkills">Read More</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="skillBar">
-                <div class="info">
-                    <p>CSS</p>
-                    <p class="percent">70%</p>
+            <div class="cardSkills">
+                <div class="face face1">
+                    <div class="contentSkills">
+                        <i class="fab fa-css3"></i>               <h3>CSS</h3>
+                    </div>
                 </div>
-                <div class="bar">
-                    <span class="css"></span>
-                </div>
-            </div>
-
-            <div class="skillBar">
-                <div class="info">
-                    <p>Java Script</p>
-                    <p class="percent">60%</p>
-                </div>
-                <div class="bar">
-                    <span class="javaScript"></span>
+                <div class="face face2">
+                    <div class="contentSkills">
+                        <p>CSS stands for Cascading Style Sheets. It is a style sheet language which is used to describe the look and formatting of a document written in markup language.
+                            It provides an additional feature to HTML. </p>
+                        <a href="https://www.javatpoint.com/what-is-css" type="buttonSkills">Read More</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="skillBar">
-                <div class="info">
-                    <p>MYSQL</p>
-                    <p class="percent">90%</p>
+
+            <div class="cardSkills">
+                <div class="face face1">
+                    <div class="contentSkills">
+                        <i class="fab fa-js"></i>
+                        <h3>JAVA_SCRIPT</h3>
+                    </div>
                 </div>
-                <div class="bar">
-                    <span class="mysql"></span>
+                <div class="face face2">
+                    <div class="contentSkills">
+                        <p>JavaScript is a lightweight programming language that web developers
+                            commonly use to create more dynamic interactions when developing web pages, applications, servers, and or even games.</p>
+                        <a href="https://www.hostinger.com/tutorials/what-is-javascript" type="buttonSkills">Read More</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="skillBar">
-                <div class="info">
-                    <p>JAVA</p>
-                    <p class="percent">50%</p>
-                </div>
-                <div class="bar">
-                    <span class="java"></span>
-                </div>
-            </div>
 
-            <div class="skillBar">
-                <div class="info">
-                    <p>FIGMA</p>
-                    <p class="percent">85%</p>
-                </div>
-                <div class="bar">
-                    <span class="figma"></span>
-                </div>
-            </div>
 
-            <div class="skillBar">
-                <div class="info">
-                    <p>PHOTOSHOP</p>
-                    <p class="percent">45%</p>
-                </div>
-                <div class="bar">
-                    <span class="photshop"></span>
-                </div>
-            </div>
+
+
+
         </div>
+
+        </section>
+
+
     </section>
 
     <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -2545,87 +2473,43 @@
         <img class="img10" src="assets/images/FLOWLESS - Copy.jpg">
 
         <div class="fifthText"></div>
-
-
-
         <div class="projects">PROJECTS</div>
 
-        <table>
-            <thead>
-            <th id="CP"><i>Commercial Projects</i></th>
-            <th id="AP"><i>Academic Projects</i></th>
-            <th id="Asgm"><i>Assignments</i></th>
-            </thead>
-            <tbody>
-            <tr id="tr1">
-                <td>
-                    <button class="btn"><img id="Image1" src="assets/images/Pharmacy-logo.jpg" align="Center"></button>
-                    <br>
-                    <br>
-                    <p id="prjt1">Pharmacy Management System</p>
-                </td>
 
-                <td>
-                    <button class="btn"><img id="Image2" src="assets/images/04aa96a4-6ba4-4096-bd1f-7750944ebd7e.jpg" align="Center"></button>
 
-                    <p id="prjt2" align="Center Right">Programming Fundamental Student Management System </p>
-                </td>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
-                <td>
-                    <button class="btn"> <img id="Image3" src="assets/images/99e5686d-9959-46b6-895c-a7e5be4e4481.jpg" align="Center"></button>
-
-                    <p id="prjt3">Programming Fundamental Assigments.</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-
-                </td>
-
-                <td>
-
-                    <button class="btn"><img id="Image4" src="assets/images/c4c111e6-6420-49f8-92b7-149645a1e697.jpg" align="Center"></button>
-                    <br>
-                    <br>
-                    <p id="prjt4">Objects Oriented Programming(OOP) game.</p>
-
-                </td>
-
-                <td>
-                    <button class="btn"><img id="Image5" src="assets/images/f5604e1e-f6a0-4aa4-96ea-3332bbc0f034.jpg" align="Center"></button>
-
-                    <p id="prjt5">Database Management System Assignment.</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td>
-                    <button class="btn"><img id="Image6" src="assets/images/3f76d2f5-87fd-4fd2-a63a-62e7d46fddf5.jpg" align="Center"></button>
-                    <br>
-                    <br>
-                    <p id="prjt6">Hotel Management System(Prototype).</p>
-                </td>
-
-                <td>
-                    <button class="btn"><img id="Image7" src="assets/images/7c29eb28-d6c6-49d8-934a-378c8ff79cc7.jpg" align="Center"></button>
-
-                    <p id="prjt7">Object Oriented programming assignments.</p>
-                </td>
-            </tr>
-
-            <tr>
-                <td></td>
-                <td></td>
-                <td>
-                    <button class="btn"><img id="Image8" src="assets/images/011d3581-34c6-4609-ac93-dca469b41303.jpg" align="Center"></button>
-
-                    <p id="prjt8">Internet Technology Assignments.</p>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="hero-section">
+            <div class="card-grid">
+                <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
+                    <div class="card__content">
+                        <p class="card__category">Category</p>
+                        <h3 class="card__heading">HTML Assignments</h3>
+                    </div>
+                </a>
+                <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                        <p class="card__category">Category</p>
+                        <h3 class="card__heading">CSS Assignments</h3>
+                    </div>
+                </a>
+                <a class="card" href="#">
+                    <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                    <div class="card__content">
+                        <p class="card__category">Category</p>
+                        <h3 class="card__heading">JavaScript Assignments</h3>
+                    </div>
+                </a>
+                <!-- <a class="card" href="#">
+                     <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
+                     <div class="card__content">
+                         <p class="card__category">Category</p>
+                         <h3 class="card__heading">Example Card Heading</h3>
+                     </div>
+                 </a>-->
+        </div>
 
     </section>
 
@@ -2704,16 +2588,46 @@
             <button id="btnmsg" style="--clr:darkCyan" type="sendMessage">Send Message</button>
         </form>
 
-        <img id="logo1" src="assets/images/7d8a472f-5c30-406f-b2c6-b9d3210f2d10.jpg">
-        <img id="logo2" src="assets/images/c9485e52-7b88-4530-ab4a-3a37083c3aa9.jpg">
-        <img id="logo3" src="assets/images/dfd8f780-3f04-4fd2-b230-9f7e8f14a27d.jpg">
-        <img id="logo4" src="assets/images/d3b77cd4-dcbc-4fa1-8fb6-d885a68eed46.jpg">
+        <a id="logo1" href=  "https://github.com/Mihishani">
+      <!--  <img id="logo1" src="assets/images/7d8a472f-5c30-406f-b2c6-b9d3210f2d10.jpg">-->
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a id="logo2" href=  "https://github.com/Mihishani">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+
+        <a id="logo3" href=  "https://www.linkedin.com/in/frimeshani-fernando-b31921265/">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a id="logo4" href=  "https://www.pinterest.com/">
+            <i class="fa-brands fa-pinterest"></i>
+        </a>
+
+        <!--  <img id="logo2" src="assets/images/c9485e52-7b88-4530-ab4a-3a37083c3aa9.jpg">-->
+     <!--   <img id="logo3" src="assets/images/dfd8f780-3f04-4fd2-b230-9f7e8f14a27d.jpg">-->
+       <!-- <img id="logo4" src="assets/images/d3b77cd4-dcbc-4fa1-8fb6-d885a68eed46.jpg">-->
 
 
     </section>
 
+
+   <!-- <section id="HTML_Assignment">
+        <div class="htmlPage">
+
+
+            <div class="content1"><span>H</span>TML-<span>AS</span>SIGNMENTS</div>
+
+
+
+        </div>
+    </section>-->
+
     <!--=============================================================================-->
 
+    <script src="https://kit.fontawesome.com/975c7217f8.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/lib/jquery-3.6.4.min.js"></script>
 
@@ -2726,7 +2640,12 @@
             },200)
         })
     </script>
+
+
 </main>
 
 </body>
 </html>
+
+
+<!--https://myprofilemihi.000webhostapp.com/-->

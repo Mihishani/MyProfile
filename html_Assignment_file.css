@@ -58,13 +58,567 @@
 .content1{
     font-family: Monaco;
     font-size: xxx-large;
-    color: white;
+    color: black;
     font-weight: bolder;
     position: relative;
-    top: 10px;
+    top: 30px;
     right: -100px;
 }
 
 .content1 span{
     color: darkred;
+}
+
+/*/////////////////////////////////////////////////////*/
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#HTML_Assignment{
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cardhtml {
+    position: relative;
+    top: 100px;
+    align-content: center;
+    background-color: lightpink;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card__image {
+    width: 100%;
+    height: auto;
+}
+
+.card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+   /* background-color: var(--surface-color);*/
+    background-color: pink;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.cardhtml:hover .card__overlay {
+    transform: translateY(0);
+}
+
+.card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+   /* background-color: var(--surface-color);*/
+    background-color: pink;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.cardhtml:hover .card__header {
+    transform: translateY(0);
+}
+
+.card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.card__status {
+    font-size: .8em;
+   /* color: #D7BDCA;*/
+    color: #2d3548;
+}
+
+.card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+   /* color: #D7BDCA;*/
+
+    color: gray;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/*/////////////////////////////////////////////////////CSS Page/////////////////////////////////////////////////////////////////////////////*/
+
+#CSS_Assignment, .cssPage {width:100%; height:100vh; margin:0; padding:0;}
+
+
+
+@keyframes bgCSSanimation
+{
+    0%   {
+        background-position:
+                -100% -100%,
+                200% 200%,
+                -100% 200%,
+                200% -100%;
+    }
+    50% {
+        background-position:
+                150% 100%,
+                -200% 100%,
+                100% 0%,
+                0% 100%;
+    }
+    100% {
+        background-position:
+                -100% -100%,
+                200% 200%,
+                -100% 200%,
+                200% -100%;
+    }
+}
+
+
+.cssPage {
+    background:
+            radial-gradient(ellipse at center, rgba(0,0,255,0.3) 0%, rgba(0,0,0,0) 70%), /* niebieski */
+            radial-gradient(ellipse at center, rgba(255,0,0,0.3) 0%, rgba(0,0,0,0) 70%), /*czerwony */
+            radial-gradient(ellipse at center, rgba(0,255,0,0.3) 0%, rgba(0,0,0,0) 70%) /*zielony */
+            #FAF0E6;
+    background-repeat:
+            no-repeat,
+            no-repeat,
+            no-repeat;
+    background-size:
+            900px 900px,
+            900px 900px,
+            900px 900px;
+    background-attachment: fixed;
+
+    animation:bgCSSanimation 30s infinite;
+}
+#CSS_Assignment { height: 100vh;}
+
+.content2{
+    font-family: Monaco;
+    font-size: xxx-large;
+    color: black;
+    font-weight: bolder;
+    position: relative;
+    top: 30px;
+    right: -100px;
+}
+
+.content2 span{
+    color: darkred;
+}
+
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#CSS_Assignment{
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+}
+
+.cardsCSS {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cardcss {
+    position: relative;
+    top: 100px;
+    align-content: center;
+    background-color: lightpink;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.cardcss__image {
+    width: 100%;
+    height: auto;
+}
+
+.cardcss__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    /* background-color: var(--surface-color);*/
+    background-color: pink;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.cardcss:hover .cardcss__overlay {
+    transform: translateY(0);
+}
+
+.cardcss__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    /* background-color: var(--surface-color);*/
+    background-color: pink;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.cardcss__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.cardcss__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.cardcss:hover .cardcss__header {
+    transform: translateY(0);
+}
+
+.cardcss__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cardcss__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.cardcss__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.cardcss__status {
+    font-size: .8em;
+    /* color: #D7BDCA;*/
+    color: #2d3548;
+}
+
+.cardcss__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    /* color: #D7BDCA;*/
+
+    color: gray;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/*///////////////////////////////////////////////////////////JS Page////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+#JS_Assignment, .jsPage {width:100%; height:100vh; margin:0; padding:0;}
+
+
+
+@keyframes bgJSanimation
+{
+    0%   {
+        background-position:
+                -100% -100%,
+                200% 200%,
+                -100% 200%,
+                200% -100%;
+    }
+    50% {
+        background-position:
+                150% 100%,
+                -200% 100%,
+                100% 0%,
+                0% 100%;
+    }
+    100% {
+        background-position:
+                -100% -100%,
+                200% 200%,
+                -100% 200%,
+                200% -100%;
+    }
+}
+
+
+.jsPage {
+    background:
+            radial-gradient(ellipse at center, rgba(0,0,255,0.3) 0%, rgba(0,0,0,0) 70%), /* niebieski */
+            radial-gradient(ellipse at center, rgba(255,0,0,0.3) 0%, rgba(0,0,0,0) 70%), /*czerwony */
+            radial-gradient(ellipse at center, rgba(0,255,0,0.3) 0%, rgba(0,0,0,0) 70%) /*zielony */
+            #FAF0E6;
+    background-repeat:
+            no-repeat,
+            no-repeat,
+            no-repeat;
+    background-size:
+            900px 900px,
+            900px 900px,
+            900px 900px;
+    background-attachment: fixed;
+
+    animation:bgJSanimation 30s infinite;
+}
+#JS_Assignment { height: 100vh;}
+
+.content3{
+    font-family: Monaco;
+    font-size: xxx-large;
+    color: black;
+    font-weight: bolder;
+    position: relative;
+    top: 30px;
+    right: -100px;
+}
+
+.content3 span{
+    color: darkred;
+}
+
+
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#JS_Assignment{
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fef8f8;
+}
+
+.cardsJs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cardjs {
+    position: relative;
+    top: 100px;
+    align-content: center;
+    background-color: lightpink;
+    display: block;
+    height: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.cardjs__image {
+    width: 100%;
+    height: auto;
+}
+
+.cardjs__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc(var(--curve) * 1px);
+    /* background-color: var(--surface-color);*/
+    background-color: pink;
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+}
+
+.cardjs:hover .cardjs__overlay {
+    transform: translateY(0);
+}
+
+.cardjs__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    /* background-color: var(--surface-color);*/
+    background-color: pink;
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+}
+
+.cardjs__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.cardjs__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+
+.cardjs:hover .cardjs__header {
+    transform: translateY(0);
+}
+
+.cardjs__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.cardjs__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+}
+
+.cardjs__tagline {
+    display: block;
+    margin: 1em 0;
+    font-family: "MockFlowFont";
+    font-size: .8em;
+    color: #D7BDCA;
+}
+
+.cardjs__status {
+    font-size: .8em;
+    /* color: #D7BDCA;*/
+    color: #2d3548;
+}
+
+.cardjs__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    /* color: #D7BDCA;*/
+
+    color: gray;
+    font-family: "MockFlowFont";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+/*----------------------------------------------------*/
+.btnBack{
+    color: black;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: transparent;
+    position: absolute;
+    border: transparent;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+
+}
+
+.btnRedo{
+    color: black;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: transparent;
+    position: absolute;
+    border: transparent;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+
 }
